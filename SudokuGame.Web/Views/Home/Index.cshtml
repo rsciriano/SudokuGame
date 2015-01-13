@@ -1,0 +1,23 @@
+﻿<div ng-app="SudokuGame" ng-controller="SudokuController">
+    <div class="row">
+        <div class="col-md-4">
+            <h1>Sudoku game</h1>
+        </div>
+    </div>
+    <div class="alert" ng-class="message.type" role="alert">{{message.text}}</div>
+    <div class="row">
+        <div class="col-md-4">
+            <table class="sudoku">
+                <tr ng-repeat="rows in sudokuGrid" class="b_{{$index % 3 == 0}}">
+                    <td ng-repeat="item in rows" class="b_{{$index % 3 == 0}}" ng-class="item.status">
+                        <span ng-if="item.fixed">{{item.value}}</span>
+                        <input ng-if="!item.fixed" type="text" maxlength="1" ng-model="item.value" />
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-md-4">
+            <a class="btn btn-default" ng-click="validateSudoku()" role="button">Comprobar sudoku</a>
+        </div>
+    </div>
+</div>
