@@ -38,6 +38,7 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\SudokuGame.Web.XML</DocumentationFile>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Golden.Man.Sudoku.Solver">
